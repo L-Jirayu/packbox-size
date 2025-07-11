@@ -10,6 +10,8 @@ import {
 } from '@nestjs/common';
 import { PackingService } from './packing.service';
 import { CreatePackingDto } from './dto/create-packing.dto';
+import { BadRequestException } from '@nestjs/common';
+
 
 @Controller('packing')
 export class PackingController {
@@ -65,22 +67,6 @@ export class PackingController {
     return {
       statusCode: 200,
       message: 'Deleted',
-    };
-  }
-
-  @Patch(':id')
-  async update(@Param('id') id: string, @Body() body: CreatePackingDto) {
-    const updated = await this.packingService.update(id, body.skus);
-    if (!updated) throw new NotFoundException('Packing result not found');
-    return {
-      statusCode: 200,
-      message: 'Success',
-      data: {
-        _id: updated._id,
-        box: updated.box,
-        dimension: updated.dimension,
-        createdAt: updated.createdAt,
-      },
     };
   }
 }

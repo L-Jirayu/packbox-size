@@ -1,9 +1,9 @@
 import { SKUItemDto } from '../dto/create-packing.dto';
 
 export interface Box {
-  length: number; // ใช้แทน depth
   width: number;
   height: number;
+  depth: number;
 }
 
 export interface PackingResult {
@@ -17,8 +17,9 @@ export interface PackingResult {
 export interface ItemDimension {
   dimension: {
     width: number;
-    length: number; // แทน depth
     height: number;
+    depth: number; 
+    
   };
   name?: string;
 }

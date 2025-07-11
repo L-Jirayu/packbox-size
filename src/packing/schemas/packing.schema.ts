@@ -10,9 +10,9 @@ export class Packing {
 
   @Prop({ type: Object })
   dimension: {
-    length: number;
     width: number;
     height: number;
+    depth: number;
   };
 
   @Prop({ type: Date, default: Date.now })

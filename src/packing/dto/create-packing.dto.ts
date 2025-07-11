@@ -6,10 +6,10 @@ export class DimensionDto {
   width: number;
 
   @IsNumber()
-  length: number;
+  height: number;
 
   @IsNumber()
-  height: number;
+  depth: number;
 }
 
 export class SKUItemDto {
