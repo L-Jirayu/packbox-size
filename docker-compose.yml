@@ -12,6 +12,23 @@ services:
     volumes:
       - mongo-data:/data/db
 
+  nestjs:
+    build: ../packbox_size
+    ports:
+      - "3000:3000"
+    environment:
+      MONGO_URI: mongodb://root:example@mongo:27017/packbox_size?authSource=admin
+    depends_on:
+      - mongo
+      - pythonapi
+
+  pythonapi:
+    build: ../3D-bin-packing
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+
 volumes:
   mongo-data:
     driver: local

@@ -16,7 +16,7 @@ export class PackingService {
   // 🔁 เรียก Python microservice แทนการใช้ JS logic
   async getBoxFromPythonService(skus: SKUItemDto[]): Promise<Box> {
     try {
-      const response = await axios.post('http://localhost:5000/pack', { skus });
+      const response = await axios.post('http://pythonapi:5000/pack', { skus });
       // ดึง bin แรก (หรือ bin ที่ต้องการ)
       const firstBin = response.data.bins?.[0];
       if (!firstBin) {
