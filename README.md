@@ -1,3 +1,43 @@
+# Packbox Size
+
+------------------------------------------------------------------------------------------
+
+## Important
+Adapted from: https://github.com/L-Jirayu/3d-bin-packing</br>
+use this Repository for API</br>
+
+------------------------------------------------------------------------------------------
+
+## Concept
+
+For study about Microservice System concept with using Backend Developemnt
+
+------------------------------------------------------------------------------------------
+
+## Tools
+
+Framework of NodeJS to have name is **NestJS**</br>
+**FastAPI** for Python API</br>
+**Docker** for connect to Database part</br>
+**MongoDB** for Database</br>
+
+------------------------------------------------------------------------------------------
+
+## Setup
+
+1.install NodeJS: https://nodejs.org/en/download/current</br>
+2.use git for clone</br>
+3.**npm install** for install all npm it has</br>
+4.**pip install requirement.txt** from this repository: https://github.com/L-Jirayu/3d-bin-packing</br>
+5..**docker-compose up --build** for connect to Docker</br>
+6.**npm run start:dev** for run
+
+
+P.S. If use [username]:[password] for connect to MongoDB you can see in docker-compose.yml
+
+------------------------------------------------------------------------------------------
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
